@@ -74,7 +74,7 @@ class WeatherETL:
 
     def extract_capitals(self) -> list[CapitalRecord]:
         params = {
-            "fields": "name,capital,capitalInfo,population,area,independent",
+            "fields": "name,capital,capitalInfo,population,area",
         }
         response = self._get(RESTCOUNTRIES_URL, params=params)
         payload = response.json()
